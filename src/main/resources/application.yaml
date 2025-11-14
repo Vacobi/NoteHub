@@ -51,7 +51,7 @@ spring:
   validation-rule:
     title:
       max-length: 128
-      regex: ^[a-zA-Z0-9][a-zA-Z0-9 .,!?;:()\[\]{}\"']{${spring.validation-rule.title.min-length-in-regex},${spring.validation-rule.title.max-length-in-regex}}$
+      regex: ^[a-zA-Zа-яА-ЯёЁ0-9][a-zA-Zа-яА-ЯёЁ0-9 .,!?;:()\[\]{}\"']{${spring.validation-rule.title.min-length-in-regex},${spring.validation-rule.title.max-length-in-regex}}$
       min-length-in-regex: 0
       max-length-in-regex: 127
     content:
