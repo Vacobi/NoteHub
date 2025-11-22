@@ -79,6 +79,9 @@ public class NoteService {
         // TODO in future usage of MQ or MB
         analyticsService.createNoteView(new NoteViewRequestDto(dto.getId(), getNoteRequestDto.getUserId()));
 
+        if (Objects.equals(note.getUserId(), getNoteRequestDto.getUserId())) {
+            dto.setOwner(true);
+        }
         return dto;
     }
 

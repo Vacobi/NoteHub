@@ -1,9 +1,6 @@
 package vstu.isd.notebin.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import vstu.isd.notebin.entity.ExpirationType;
 
 import java.time.Duration;
@@ -24,4 +21,7 @@ public class NoteDto {
     private Duration expirationPeriod;
     private LocalDateTime expirationFrom;
     private Long userId;
+    @Setter
+    private boolean owner = false;
+
 }
